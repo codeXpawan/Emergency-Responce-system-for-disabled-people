@@ -90,7 +90,7 @@ void callback(String topic, byte* message, unsigned int length) {
       Serial.print(md);
     }
     if (topic == "/emergency/stop"){
-    // md = 0;
+    md = 0;
     j = 1;
     Serial.println("stopimng emergency alert");
     }
