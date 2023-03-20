@@ -1,0 +1,909 @@
+[
+    {
+        "id": "caaaf5937da1db26",
+        "type": "tab",
+        "label": "Emergency Response for Disabled People",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8d8a36f3fc3242e0",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#31ff2e",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#31ff2e",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#31ff2e",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#7cff7a",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#31ff2e",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4e29456e7e37ed1c",
+        "type": "ui_group",
+        "name": "",
+        "tab": "12d3fddf35396ba4",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a5ee9271bab18625",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "12d3fddf35396ba4",
+        "type": "ui_tab",
+        "name": "AAKASHMIK SUCHANA",
+        "icon": " white-globe.svg",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1259c2278803f297",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "/ui",
+        "instancehash": "p4786e68zm5bmnxjriov6hn4h8szgub8m3xfq1fii8jh7fyl888x9zfykn9d1jw8",
+        "server": "nodered04.remote-red.com",
+        "region": "de"
+    },
+    {
+        "id": "5f2b53c6f333d7cb",
+        "type": "mqtt out",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "topic": "/emergency/rgb",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a5ee9271bab18625",
+        "x": 640,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a96609382a5f6189",
+        "type": "ui_switch",
+        "z": "caaaf5937da1db26",
+        "name": "Light",
+        "label": "Emergency Switch",
+        "tooltip": "",
+        "group": "4e29456e7e37ed1c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "/emergency/rgb",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "red",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "white",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 100,
+        "wires": [
+            [
+                "5f2b53c6f333d7cb",
+                "744b8ac134eb8b7c"
+            ]
+        ]
+    },
+    {
+        "id": "eda085d72fbf6a33",
+        "type": "ui_gauge",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "group": "4e29456e7e37ed1c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Air Quality Currently",
+        "label": "ppm",
+        "format": "{{msg.payload.airGas}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1400,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8efc416315f3dc01",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "name": "If(Air Quality)",
+        "func": "var data= msg.payload.airGas\nvar airInformation=[[\"Healthy Atmosphere!\", \"green\"], [\"Not So Good!\", \"yellow\"], [\"Emergency\", \"red\"]]\n// let arr = [\"Good For Health!\",\"Take Care!\",\"Harmful For Health!\"]\nif (data > 0 && data < 750){\n    msg.payload = airInformation[0]\n}else if(data> 750 && data <1200){\n    msg.payload =airInformation[1]\n}else if(data >1200){\n    msg.payload = airInformation[2]\n}\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 140,
+        "wires": [
+            [
+                "d49a604815b89c39",
+                "1f4baa861303aeae"
+            ]
+        ]
+    },
+    {
+        "id": "4922e8323519e1c8",
+        "type": "inject",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 520,
+        "wires": [
+            [
+                "b9b798577026c65d"
+            ]
+        ]
+    },
+    {
+        "id": "b9b798577026c65d",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "name": "function 3",
+        "func": "var response_data = \"Hello Everyone\"\nflow.set(\"response_data\", response_data)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 520,
+        "wires": [
+            [
+                "bb468b19f5a015c0"
+            ]
+        ]
+    },
+    {
+        "id": "4ef54e4ae0f9f617",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "d": true,
+        "name": "function 4",
+        "func": "var response_data = flow.get(\"response_data\") || \"\"\nmsg.payload = response_data\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 700,
+        "wires": [
+            [
+                "9cebc404f6f3f67f"
+            ]
+        ]
+    },
+    {
+        "id": "9cebc404f6f3f67f",
+        "type": "debug",
+        "z": "caaaf5937da1db26",
+        "d": true,
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "ccb540d557fade74",
+        "type": "inject",
+        "z": "caaaf5937da1db26",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 700,
+        "wires": [
+            [
+                "4ef54e4ae0f9f617"
+            ]
+        ]
+    },
+    {
+        "id": "bb468b19f5a015c0",
+        "type": "ui_template",
+        "z": "caaaf5937da1db26",
+        "group": "4e29456e7e37ed1c",
+        "name": "EmergencyForm",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "\n<form>\n    <h3>Mention the Type of <span style=\"color:red;\">Emergency!</span></h3>\n    <h5>[i.e flood, earthquake, gas leakage]</h5>\n<input style=\"border-radius: 5px; height: 35px;\" type=\"text\" ng-model=\"response_data\"></input>\n<button style=\"border-radius: 5px; border: none; background: red; color: white; padding: 10px; font-weight: 300;\" ng-click=\"send({payload:response_data})\">Submit</button>\n</form>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 480,
+        "y": 520,
+        "wires": [
+            [
+                "21803b28c977547f",
+                "f70bc513d0a569d0"
+            ]
+        ]
+    },
+    {
+        "id": "21803b28c977547f",
+        "type": "debug",
+        "z": "caaaf5937da1db26",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "f70bc513d0a569d0",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "name": "function 5",
+        "func": "var response_data = msg.payload\nflow.set(\"response_data\", response_data)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 480,
+        "wires": [
+            [
+                "d5c580362a2d7001"
+            ]
+        ]
+    },
+    {
+        "id": "dd844caaa5df6c17",
+        "type": "comment",
+        "z": "caaaf5937da1db26",
+        "name": "Emergency Light",
+        "info": "",
+        "x": 440,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "0d7daee3f6328b6a",
+        "type": "comment",
+        "z": "caaaf5937da1db26",
+        "name": "Emergency Air Quality Sensor",
+        "info": "",
+        "x": 1320,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "3765c748644c9621",
+        "type": "comment",
+        "z": "caaaf5937da1db26",
+        "name": "TYPE OF EMERGENCY FORM",
+        "info": "",
+        "x": 350,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "2b9d632ee35940b5",
+        "type": "mqtt in",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "topic": "/emergency/gas",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a5ee9271bab18625",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 880,
+        "y": 240,
+        "wires": [
+            [
+                "925ee7aedb4b155c",
+                "5d8c3de11305691f",
+                "cb07680bfa9f5e1c"
+            ]
+        ]
+    },
+    {
+        "id": "925ee7aedb4b155c",
+        "type": "debug",
+        "z": "caaaf5937da1db26",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "5d8c3de11305691f",
+        "type": "json",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 1090,
+        "y": 240,
+        "wires": [
+            [
+                "eda085d72fbf6a33",
+                "8efc416315f3dc01",
+                "740d4e26a4e591c4",
+                "7d2f1b93d2759ee8"
+            ]
+        ]
+    },
+    {
+        "id": "cb07680bfa9f5e1c",
+        "type": "delay",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1150,
+        "y": 280,
+        "wires": [
+            [
+                "eda085d72fbf6a33"
+            ]
+        ]
+    },
+    {
+        "id": "d6c10455027a9702",
+        "type": "mqtt out",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "topic": "/emergency/say",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a5ee9271bab18625",
+        "x": 620,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d5c580362a2d7001",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "name": "function",
+        "func": "var response_data = flow.get(\"response_data\") || \"\"\nmsg.payload = response_data\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "d6c10455027a9702",
+                "4a6f0ecccc761a5a",
+                "c3b576863a2fa457",
+                "ea50090256f689ca"
+            ]
+        ]
+    },
+    {
+        "id": "4a6f0ecccc761a5a",
+        "type": "debug",
+        "z": "caaaf5937da1db26",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d49a604815b89c39",
+        "type": "ui_template",
+        "z": "caaaf5937da1db26",
+        "group": "4e29456e7e37ed1c",
+        "name": "AirQualityInfo",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"margin: 0 auto; font-weight:800; font-size: 20px; color:{{msg.payload[1]}}\">{{msg.payload[0]}}</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1520,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e3bf872589089a6",
+        "type": "ui_gauge",
+        "z": "caaaf5937da1db26",
+        "name": "Humidity",
+        "group": "4e29456e7e37ed1c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1500,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "798640da423a15cf",
+        "type": "ui_template",
+        "z": "caaaf5937da1db26",
+        "group": "4e29456e7e37ed1c",
+        "name": "Welcome ",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<marquee style=\"margin: 0 auto; font-weight: 900; font-size: 40px;\">Welcome! to <span style=\"color: red;\">Emergency</span> Response System</marquee>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 440,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3b576863a2fa457",
+        "type": "mqtt out",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "topic": "/emergency/lcd",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a5ee9271bab18625",
+        "x": 620,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "08b9a366da928f9a",
+        "type": "ui_widget_thermometer",
+        "z": "caaaf5937da1db26",
+        "group": "4e29456e7e37ed1c",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "Temperature",
+        "title": "Temperature",
+        "numColor": "3",
+        "colorTop": "#2196f3",
+        "colorMiddle": "#8bc34a",
+        "colorBottom": "#f44336",
+        "unit": "°C",
+        "scale": "small",
+        "minTemp": "0",
+        "maxTemp": 100,
+        "x": 1530,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "95a698578f17daa7",
+        "type": "ui_gauge",
+        "z": "caaaf5937da1db26",
+        "d": true,
+        "name": "",
+        "group": "4e29456e7e37ed1c",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Temperature",
+        "label": "deg",
+        "format": "{{msg.payload.temperature}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1650,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "740d4e26a4e591c4",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "name": "function 6",
+        "func": "if(msg.payload.temperature<0){\n    msg.payload.temperature = 0\n}\nmsg.payload = Math.ceil(msg.payload.temperature)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 200,
+        "wires": [
+            [
+                "08b9a366da928f9a"
+            ]
+        ]
+    },
+    {
+        "id": "1f4baa861303aeae",
+        "type": "debug",
+        "z": "caaaf5937da1db26",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7d2f1b93d2759ee8",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "name": "function 8",
+        "func": "var hum = msg.payload.humidity\nmsg.payload = (hum/200)*100\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 320,
+        "wires": [
+            [
+                "0e3bf872589089a6"
+            ]
+        ]
+    },
+    {
+        "id": "28e0301ad4c59cca",
+        "type": "ui_button",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "group": "4e29456e7e37ed1c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Stop Button",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "02b32fcf82a080a3",
+                "fb5dff9723e15985"
+            ]
+        ]
+    },
+    {
+        "id": "02b32fcf82a080a3",
+        "type": "mqtt out",
+        "z": "caaaf5937da1db26",
+        "name": "",
+        "topic": "/emergency/stop",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a5ee9271bab18625",
+        "x": 350,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fb5dff9723e15985",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "name": "function 9",
+        "func": "msg.payload = \"white\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "a96609382a5f6189"
+            ]
+        ]
+    },
+    {
+        "id": "ea50090256f689ca",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "name": "function 10",
+        "func": "msg.payload = \"red\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "5f2b53c6f333d7cb"
+            ]
+        ]
+    },
+    {
+        "id": "744b8ac134eb8b7c",
+        "type": "function",
+        "z": "caaaf5937da1db26",
+        "name": "function 11",
+        "func": "if(msg.payload == \"red\"){\n    msg.payload= \"EMERGENCY\"\n}else if(msg.payload == \"white\"){\n    msg.payload = \"\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "c3b576863a2fa457",
+                "d6c10455027a9702"
+            ]
+        ]
+    }
+]
